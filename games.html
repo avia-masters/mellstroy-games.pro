@@ -7,9 +7,9 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Игры Mellstroy Games — слоты, live-казино и краш-игры Мел Казино</title>
-  <meta name="description" content="Каталог игр Mellstroy Games (Мел Казино): более 2000 слотов от Pragmatic Play, NetEnt, Evolution. Играть бесплатно или на деньги. Высокий RTP, джекпоты. 18+." />
-  <meta name="keywords" content="mellstroy games игры, мел каз слоты, кази мел автоматы, mellstroy slots, mel games каталог, игровые автоматы мелстрой, mellstroy casino games, играть в мел казино" />
+  <title>Игры Mellstroy Games — полный каталог слотов Мел Казино</title>
+  <meta name="description" content="Каталог игр Mellstroy Games (Мел Казино): более 2000 слотов, Live-казино, Crash-игры. Играть бесплатно или на деньги. Высокий RTP, джекпоты. 18+." />
+  <meta name="keywords" content="mellstroy games игры, мел каз слоты, кази мел автоматы, mellstroy slots, mel games каталог, игровые автоматы мелстрой, mellstroy casino games, играть в мел казино, live казино мелстрой, авиатор мелстрой" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#2589FF" />
   
@@ -31,7 +31,7 @@
   <!-- /Yandex.Metrika counter -->
 
   <style>
-    /* Вставляем те же стили, что и в index.html для единообразия */
+    /* Tokens & Palette */
     :root {
       --lb-c-2589FF: #2589FF; --lb-c-25475C: #25475C; --lb-c-111117: #111117; --lb-c-FFFFFF: #FFFFFF;
       --lb-c-5A7EA8: #5A7EA8; --lb-c-2A7AD9: #2A7AD9; --lb-c-262D36: #262D36; --lb-c-06060C: #06060C;
@@ -46,7 +46,7 @@
     .page { min-height: 100vh; display: flex; flex-direction: column; } .page__main { flex: 1; }
     .section { padding: 48px 0; }
     
-    /* Header & Footer styles (same as index) */
+    /* Header & Footer styles */
     .lb-header-pill { width: 100%; max-width: 1100px; margin: 0 auto; padding: 16px var(--lb-gutter); box-sizing: border-box; }
     .lb-header-pill__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 14px 10px 18px; border-radius: 999px; background: var(--lb-c-06060C); box-shadow: 0 12px 32px rgba(9, 9, 28, 0.28); }
     .lb-header-pill__brand { display: flex; align-items: center; text-decoration: none; } .lb-header-pill__img { height: 36px; width: auto; object-fit: contain; }
@@ -91,11 +91,16 @@
       aspect-ratio: 4/3;
       background: #f0f4f8;
       position: relative;
+      overflow: hidden;
     }
     .game-card__img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .game-card:hover .game-card__img {
+      transform: scale(1.05);
     }
     .game-card__info {
       padding: 12px 16px;
@@ -129,6 +134,67 @@
     }
     .game-card__btn:hover {
       background: var(--lb-c-2A7AD9);
+    }
+
+    /* Promo Banners */
+    .promo-banner {
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      margin: 40px 0;
+      position: relative;
+      box-shadow: 0 12px 32px rgba(9, 9, 28, 0.15);
+    }
+    .promo-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .promo-banner__overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, rgba(6,6,12,0.8) 0%, rgba(6,6,12,0) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      color: #fff;
+    }
+    .promo-banner__title {
+      font-family: var(--lb-font-display);
+      font-size: clamp(24px, 4vw, 36px);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .promo-banner__text {
+      font-size: 16px;
+      max-width: 500px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .promo-banner__btn {
+      display: inline-block;
+      background: var(--lb-c-2589FF);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      width: fit-content;
+    }
+    .promo-banner__btn:hover {
+      background: var(--lb-c-2A7AD9);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-family: var(--lb-font-display);
+      font-size: 28px;
+      color: var(--lb-c-111117);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      border-left: 5px solid var(--lb-c-2589FF);
+      padding-left: 16px;
     }
 
     /* SEO Text Block */
@@ -183,11 +249,11 @@
           <img class="lb-header-pill__img" src="images/logo.svg" alt="Mellstroy Games — логотип" width="150" height="36" />
         </a>
         <nav class="lb-header-pill__nav" aria-label="Основное меню Mellstroy Games">
-          <a class="lb-header-pill__link" href="index.html#games" title="Игры Mellstroy Games">Игры</a>
-          <a class="lb-header-pill__link" href="index.html#bonus" title="Бонусы Mellstroy Games">Бонусы</a>
-          <a class="lb-header-pill__link" href="index.html#razdely" title="Разделы сайта Mellstroy Games">Разделы</a>
-          <a class="lb-header-pill__link" href="index.html#mirror" title="Зеркало Mellstroy">Зеркало</a>
-          <a class="lb-header-pill__link" href="index.html#faq" title="FAQ Mellstroy Games">FAQ</a>
+          <a class="lb-header-pill__link" href="index.html" title="Главная Mellstroy Games">Главная</a>
+          <a class="lb-header-pill__link" href="bonus.html" title="Бонусы Mellstroy Games">Бонусы</a>
+          <a class="lb-header-pill__link" href="providers.html" title="Провайдеры Mellstroy Games">Провайдеры</a>
+          <a class="lb-header-pill__link" href="app.html" title="Приложение Mellstroy Games">Приложение</a>
+          <a class="lb-header-pill__link" href="reviews.html" title="Отзывы Mellstroy Games">Отзывы</a>
           <a class="lb-header-pill__link" href="https://mell1497.life/?p=hkmq" title="Telegram-канал Мелстрой">Telegram</a>
         </nav>
         <a class="lb-header-pill__btn" href="https://mell1497.life/?p=hkmq" title="Вход в Mellstroy Games">Войти</a>
@@ -196,264 +262,213 @@
 
     <main class="page__main" id="top">
       
-      <!-- ═══ Заголовок страницы ═══ -->
-      <section class="section section--tight" style="text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto; padding: 0 var(--lb-gutter);">
-          <h1 style="font-family: var(--lb-font-display); font-size: clamp(32px, 5vw, 48px); margin-bottom: 16px; color: var(--lb-c-111117); text-transform: uppercase;">
-            <span style="color: var(--lb-c-2589FF);">Игры</span> Mellstroy Games
-          </h1>
-          <p style="font-size: 18px; color: var(--lb-c-25475C); line-height: 1.5;">
-            Полный каталог развлечений <strong>Мел Казино</strong>: лицензионные слоты, live-дилеры, краш-игры и эксклюзивные новинки. Играй в <strong>Mellstroy Games</strong> на деньги или бесплатно.
-          </p>
+      <!-- ═══ Главный Баннер ═══ -->
+      <section class="section section--tight" style="padding-bottom: 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <div class="promo-banner">
+            <img src="images/home_hero_mellstroy-1672.avif" alt="Mellstroy Games Hero Banner" loading="eager">
+            <div class="promo-banner__overlay">
+              <h1 class="promo-banner__title">Играй в Мел Казино по-крупному</h1>
+              <p class="promo-banner__text">Более 2000 лицензионных слотов, Live-дилеры и мгновенные выплаты. Забирай бонус до 500% прямо сейчас!</p>
+              <a href="https://mell1497.life/?p=hkmq" class="promo-banner__btn">Начать игру</a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- ═══ Сетка игр ═══ -->
+      <!-- ═══ Топ Слоты ═══ -->
+      <section class="section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <h2 class="section-title">Популярные слоты Мел Казино</h2>
+          <div class="games-grid">
+            <!-- Slot 1 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/GatesofOlympusSuperScatter.jpg" alt="Gates of Olympus" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Gates of Olympus</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Slot 2 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/big-bass-bonanza-1000.webp" alt="Big Bass Bonanza" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Big Bass Bonanza</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Slot 3 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/book-of-doom.webp" alt="Book of Dead" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Book of Dead</div><div class="game-card__provider">Play'n GO</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Slot 4 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/FortuneTigerPG.jpg" alt="Fortune Tiger" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Fortune Tiger</div><div class="game-card__provider">PG Soft</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Slot 5 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/sweet-bonanza-1000.webp" alt="Sweet Bonanza" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Sweet Bonanza</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Slot 6 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/le-bandit.webp" alt="Le Bandit" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Le Bandit</div><div class="game-card__provider">Hacksaw Gaming</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Slot 7 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/mental-2.jpg" alt="Mental" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Mental</div><div class="game-card__provider">Nolimit City</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Slot 8 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/chaos-crew-2.jpg" alt="Chaos Crew 2" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Chaos Crew 2</div><div class="game-card__provider">Hacksaw Gaming</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Промо Баннер 1 ═══ -->
       <section class="section" style="padding-top: 0;">
         <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
-          
-          <!-- Фильтры (визуальные) -->
-          <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px;">
-            <button style="background: var(--lb-c-2589FF); color: #fff; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Все игры</button>
-            <button style="background: #EEF4FA; color: var(--lb-c-25475C); border: 1px solid rgba(42, 122, 217, 0.12); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Слоты</button>
-            <button style="background: #EEF4FA; color: var(--lb-c-25475C); border: 1px solid rgba(42, 122, 217, 0.12); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Live</button>
-            <button style="background: #EEF4FA; color: var(--lb-c-25475C); border: 1px solid rgba(42, 122, 217, 0.12); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Crash</button>
-            <button style="background: #EEF4FA; color: var(--lb-c-25475C); border: 1px solid rgba(42, 122, 217, 0.12); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Новинки</button>
-          </div>
-
-          <div class="games-grid">
-            <!-- Card 1 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/GatesofOlympusSuperScatter.jpg" alt="Gates of Olympus" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Gates of Olympus</div>
-                  <div class="game-card__provider">Pragmatic Play</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/big-bass-bonanza-1000.webp" alt="Big Bass Bonanza" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Big Bass Bonanza</div>
-                  <div class="game-card__provider">Pragmatic Play</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/book-of-doom.webp" alt="Book of Dead" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Book of Dead</div>
-                  <div class="game-card__provider">Play'n GO</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/AviatorSP.jpg" alt="Aviator" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Aviator</div>
-                  <div class="game-card__provider">Spribe</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/FortuneTigerPG.jpg" alt="Fortune Tiger" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Fortune Tiger</div>
-                  <div class="game-card__provider">PG Soft</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 6 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/le-bandit.webp" alt="Le Bandit" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Le Bandit</div>
-                  <div class="game-card__provider">Hacksaw Gaming</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 7 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/mental-2.jpg" alt="Mental" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Mental</div>
-                  <div class="game-card__provider">Nolimit City</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 8 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/chaos-crew-2.jpg" alt="Chaos Crew 2" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Chaos Crew 2</div>
-                  <div class="game-card__provider">Hacksaw Gaming</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-             <!-- Card 9 -->
-             <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/gemhalla.webp" alt="Gemhalla" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Gemhalla</div>
-                  <div class="game-card__provider">Hacksaw Gaming</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 10 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/AnubisWrathPG.jpg" alt="Anubis Wrath" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Anubis Wrath</div>
-                  <div class="game-card__provider">PG Soft</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 11 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/AviamastersBG.jpg" alt="Aviamasters" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Aviamasters</div>
-                  <div class="game-card__provider">BGaming</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 12 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/home_hero_mellstroy-1672.avif" alt="Mellstroy Hero Slot" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Mellstroy Exclusive</div>
-                  <div class="game-card__provider">Mellstroy Games</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-            
-             <!-- Card 13 -->
-             <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/crazy-time.jpg" alt="Crazy Time" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Crazy Time</div>
-                  <div class="game-card__provider">Evolution</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 14 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/speed-winner.jpg" alt="Speed Winner" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Speed Winner</div>
-                  <div class="game-card__provider">Pragmatic Play</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 15 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/mines.jpg" alt="Mines" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Mines</div>
-                  <div class="game-card__provider">Spribe</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
-            <!-- Card 16 -->
-            <a href="https://mell1497.life/?p=hkmq" class="game-card">
-              <div class="game-card__img-wrap">
-                <img src="images/tower-rush.jpg" alt="Tower Rush" class="game-card__img" loading="lazy">
-              </div>
-              <div class="game-card__info">
-                <div>
-                  <div class="game-card__title">Tower Rush</div>
-                  <div class="game-card__provider">Galaxsys</div>
-                </div>
-                <div class="game-card__btn">Играть</div>
-              </div>
-            </a>
-
+          <div class="promo-banner" style="margin: 0;">
+            <img src="images/pwa_banner.png" alt="Mellstroy Mobile App" loading="lazy">
+            <div class="promo-banner__overlay" style="background: linear-gradient(90deg, rgba(6,6,12,0.9) 0%, rgba(6,6,12,0.2) 100%);">
+              <h2 class="promo-banner__title">Играй с телефона</h2>
+              <p class="promo-banner__text">Скачай приложение Мел Казино на Android или добавь ярлык на iPhone. Быстрый доступ, push-уведомления о бонусах и стабильная работа.</p>
+              <a href="app.html" class="promo-banner__btn">Узнать подробнее</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══ SEO Текст ═══ -->
+      <!-- ═══ Live Казино ═══ -->
+      <section class="section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <h2 class="section-title">Live Казино с реальными дилерами</h2>
+          <div class="games-grid">
+            <!-- Live 1 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/crazy-time.jpg" alt="Crazy Time" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Crazy Time</div><div class="game-card__provider">Evolution</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Live 2 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/blackjack-first-person.jpg" alt="Blackjack" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">First Person Blackjack</div><div class="game-card__provider">Evolution</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Live 3 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/speed-roulette.jpg" alt="Speed Roulette" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Speed Roulette</div><div class="game-card__provider">Evolution</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Live 4 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/fortune-tiger.webp" alt="Fortune Tiger Live" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Fortune Tiger Live</div><div class="game-card__provider">PG Soft</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+       <!-- ═══ Crash Игры ═══ -->
+       <section class="section" style="background: rgba(238, 244, 250, 0.5);">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <h2 class="section-title">Crash Игры и Быстрые Ставки</h2>
+          <div class="games-grid">
+            <!-- Crash 1 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/AviatorSP.jpg" alt="Aviator" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Aviator</div><div class="game-card__provider">Spribe</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Crash 2 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/mines.jpg" alt="Mines" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Mines</div><div class="game-card__provider">Spribe</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- Crash 3 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/tower-rush.jpg" alt="Tower Rush" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Tower Rush</div><div class="game-card__provider">Galaxsys</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Crash 4 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/falling-pickaxe.jpg" alt="Falling Pickaxe" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Falling Pickaxe</div><div class="game-card__provider">Pixmove</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- Crash 5 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/speed-winner.jpg" alt="Speed Winner" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Speed Winner</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Промо Баннер 2 ═══ -->
+      <section class="section" style="padding-top: 0;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <div class="promo-banner" style="margin: 0;">
+            <img src="images/gotw_bg_left_desktop-medium_v9.png" alt="Tournament Banner" loading="lazy" style="object-position: left;">
+            <div class="promo-banner__overlay">
+              <h2 class="promo-banner__title">Турниры Mellstroy Games</h2>
+              <p class="promo-banner__text">Участвуй в еженедельных турнирах с призовым фондом до 1 000 000 рублей. Просто играй в любимые слоты и поднимайся в таблице лидеров!</p>
+              <a href="https://mell1497.life/?p=hkmq" class="promo-banner__btn">Участвовать</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ Новинки и Остальные ═══ -->
+      <section class="section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--lb-gutter);">
+          <h2 class="section-title">Новинки и Эксклюзивы Мел Казино</h2>
+          <div class="games-grid">
+            <!-- New 1 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/AnubisWrathPG.jpg" alt="Anubis Wrath" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Anubis Wrath</div><div class="game-card__provider">PG Soft</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- New 2 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/AviamastersBG.jpg" alt="Aviamasters" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Aviamasters</div><div class="game-card__provider">BGaming</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- New 3 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/gemhalla.webp" alt="Gemhalla" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Gemhalla</div><div class="game-card__provider">Hacksaw Gaming</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- New 4 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/wild-bounty-snowdown.jpg" alt="Wild Bounty" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Wild Bounty Snowdown</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- New 5 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/treasures-of-aztec.jpg" alt="Treasures of Aztec" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Treasures of Aztec</div><div class="game-card__provider">Pragmatic Play</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+            <!-- New 6 -->
+            <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/rg-picker-v3.png" alt="Random Game" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Lucky Spin</div><div class="game-card__provider">Mellstroy Exclusive</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- New 7 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/fg-5.png" alt="Feature Game" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Mystery Bonus</div><div class="game-card__provider">Mellstroy Games</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+             <!-- New 8 -->
+             <a href="https://mell1497.life/?p=hkmq" class="game-card">
+              <div class="game-card__img-wrap"><img src="images/bg-btn-v2.png" alt="Background Button" class="game-card__img" loading="lazy"></div>
+              <div class="game-card__info"><div><div class="game-card__title">Jackpot Quest</div><div class="game-card__provider">NetEnt</div></div><div class="game-card__btn">Играть</div></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ SEO Текст (ОГРОМНЫЙ) ═══ -->
       <section class="section" style="background: rgba(238, 244, 250, 0.5);">
         <div class="lb-seo-text">
-          <h2>Игровые автоматы Mellstroy Games: полный обзор каталога</h2>
+          <h2>Игровые автоматы Mellstroy Games: полный обзор каталога Мел Казино</h2>
           <p>Добро пожаловать в раздел игр платформы <strong>Mellstroy Games</strong>, также известной в рунете как <strong>Мел Казино</strong>, <strong>Кази Мел</strong> или просто <strong>Мелл Казино</strong>. Здесь собраны тысячи развлечений от ведущих мировых провайдеров. Наш каталог регулярно обновляется, добавляя новейшие релизы с высокой отдачей (RTP) и увлекательными бонусными функциями.</p>
           
           <h3>Популярные слоты в Мел Казино</h3>
@@ -483,6 +498,8 @@
             <li>PG Soft</li>
             <li>Evolution</li>
             <li>BGaming</li>
+            <li>Spribe</li>
+            <li>Galaxsys</li>
           </ul>
           <p>Каждый автомат проходит независимое тестирование на честность. Играя в <strong>Мел Казино</strong>, вы можете быть уверены в случайности каждого спина.</p>
 
